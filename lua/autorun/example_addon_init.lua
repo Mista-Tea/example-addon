@@ -14,15 +14,20 @@ for simplicity so that you know what realm the files should be running in. You c
 name them this way for clarity.
 
 lua/
-   autorun/
-      example_addon_init.lua          <--- this is the current file!
-   exampleaddon/
-      server/                         <--- this will hold all of our server files
-          sv_test1.lua
-      shared/                         <--- this will hold all of our shared files (run by both server and client)
-          sh_test2.lua     
-      client/                         <--- this will hold all of our client files
-          cl_test3.lua
+
+	autorun/
+		example_addon_init.lua          <--- this is the current file!
+	  
+	exampleaddon/
+   
+		server/                         <--- this will hold all of our server files
+			sv_test1.lua
+		  
+		shared/                         <--- this will hold all of our shared files (run by both server and client)
+			sh_test2.lua     
+		  
+		client/                         <--- this will hold all of our client files
+			cl_test3.lua
 
 Each of the server/shared/client folders will have some files. You can also name these whatever you want, but for clarity, we prefix
 them with "sv_", "sh_", and "cl_" to indicate whether they are server, shared, or client files. This doesn't do anything magical,
@@ -48,7 +53,7 @@ if ( SERVER ) then
   
     -- SHARED FILES --
     -- this file will is shared, so we must not only include it on the server,
-    -- but also AddCSLuaFile it so it gets sent to clients when they join the server
+	-- but also AddCSLuaFile it so it gets sent to clients when they join the server
          include( "exampleaddon/shared/sh_test2.lua" )
     AddCSLuaFile( "exampleaddon/shared/sh_test2.lua" )
       
