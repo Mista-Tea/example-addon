@@ -1,7 +1,7 @@
 --[[
 This file will be called by both the server and the client.
 This is true for any file directly inside a lua/autorun directory.
-We'll use this fact to start including the addons files to their respective realms,
+We'll use this fact to start including the addon files to their respective realms,
 
 e.g.:
   - server files get included on the server
