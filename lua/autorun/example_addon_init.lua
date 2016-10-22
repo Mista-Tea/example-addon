@@ -52,7 +52,7 @@ if ( SERVER ) then
     include( "exampleaddon/server/sv_test1.lua" )
   
     -- SHARED FILES --
-    -- this file will is shared, so we must not only include it on the server,
+    -- this file is shared, so we must not only include it on the server,
 	-- but also AddCSLuaFile it so it gets sent to clients when they join the server
          include( "exampleaddon/shared/sh_test2.lua" )
     AddCSLuaFile( "exampleaddon/shared/sh_test2.lua" )
