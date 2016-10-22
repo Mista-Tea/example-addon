@@ -35,7 +35,7 @@ it's just a handy naming convention that will help when you create large addons 
 but exist in different realms (e.g., "cl_player.lua" on the client and "sv_player.lua" on the server).
 
 So, to run these server/shared/client files, we use include() and AddCSLuaFile().
-include() will actually RUN the file in the current realm (i.e., server or client). So, if we run the file on the server, 
+include() will actually RUN the file in the current realm (i.e., server or client). So, if we want to run the file on the server, 
 we must include() the file serverside.
 
 If we want the client to be able to run a file, we have to use AddCSLuaFile() on the SERVER first so that it gets SENT to 
